@@ -19,7 +19,7 @@ def predict():
         result =lin_reg.predict(data).tolist() 
         return jsonify(classes[result[0]])
     
-@app.route("/home", methods=['POST'])
+@app.route("/home", methods=['GET])
 def home():
     return "Welcome"
 app.run()
