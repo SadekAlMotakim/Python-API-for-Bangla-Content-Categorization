@@ -6,8 +6,8 @@ app = Flask(__name__)
 def home():
     return "Welcome"
 
-@app.route("/predict", methods=['POST'])
-def predict():
+# @app.route("/predict", methods=['POST'])
+# def predict():
     # if request.method == 'POST':  
     #     classes = ['technology', 'economy', 'entertainment', 'international', 'sports']      
     #     data = request.get_json()      
