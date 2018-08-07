@@ -22,4 +22,6 @@ def predict():
 @app.route("/Home", methods=['POST'])
 def Home():
     return "Welcome"
-app.run()
+
+if __name__ == '__main__':
+  app.run()
