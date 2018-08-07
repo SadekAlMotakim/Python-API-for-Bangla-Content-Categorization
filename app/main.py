@@ -10,6 +10,11 @@ from pandas import DataFrame
 
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Welcome"
+
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':  
@@ -18,8 +23,4 @@ def predict():
         lin_reg = joblib.load("LinearSVC_modelAugust.pkl")
         result =lin_reg.predict(data).tolist() 
         return jsonify(classes[result[0]])
-    
-@app.route("/Home", methods=['POST'])
-def Home():
-    return "Welcome"
 app.run()
