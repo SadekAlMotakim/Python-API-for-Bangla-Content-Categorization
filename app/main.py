@@ -23,4 +23,5 @@ def predict():
         lin_reg = joblib.load("LinearSVC_modelAugust.pkl")
         result =lin_reg.predict(data).tolist() 
         return jsonify(classes[result[0]])
-app.run()
+if __name__ == '__main__':
+  app.run()
